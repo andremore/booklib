@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="./src/app.js" type="module"></script>
+        <title>Book Library</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>My Book Library</h1>
+                <h6>Keep up with your books</h6>
+            </div>
+            <div>
+                <a href="#" class="material-icons" id="menuButton">
+                    library_books
+                    <span>Add Book</span>
+                </a>
+            </div>
+        </header>
+        <hr style="border: 1px solid #474d59" />
+        <div>
+            <a href="#" class="material-icons" id="firstTimer">
+                library_books
+                <span>Add Book</span>
+            </a>
+        </div>
+        <div id="creator">
+            <a href="#" class="material-icons" id="closeButton"> close </a>
+            <div>
+                <label for="bookName">Book name:</label>
+                <input
+                    required
+                    type="text"
+                    name="bookName"
+                    placeholder="Book Name"
+                    id="bookName"
+                />
+                <label for="bookName">Book author:</label>
+                <input
+                    required
+                    type="text"
+                    name="bookAuthor"
+                    placeholder="Author"
+                    id="bookAuthor"
+                />
+                <div data-hasRead>
+                    <label>Have you read it?</label>
+                    <div data-hasRead-option>
+                        <select id="hasRead">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="bookName">Number of pages:</label>
+                <input
+                    required
+                    type="number"
+                    name="bookPages"
+                    placeholder="Number of pages"
+                    id="bookPages"
+                />
+                <button type="submit" id="addBook">Add Book</button>
+            </div>
+        </div>
+        <section>
+            <!-- <div class="card">
+                <h2 id="title">Name of the book</h2>
+                <h3>Author</h3>
+                <h4>Pages:</h4>
+                <h5>Has read:</h5>
+            </div> -->
+        </section>
+    </body>
+</html>
