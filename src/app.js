@@ -55,6 +55,15 @@ function addBookToLibrary() {
     changeToHasNotRead.setAttribute('type', 'submit');
     changeToHasNotRead.innerText = 'No';
 
+    const deleteBook = document.createElement('div');
+    deleteBook.classList.add('deleteBookContainer');
+
+    const deleteBookButton = document.createElement('button');
+    deleteBookButton.setAttribute('type', 'submit');
+
+    deleteBookButton.classList.add('deleteBookButton');
+    deleteBookButton.innerText = 'Delete Book';
+
     bookTitle.innerText = `${newBookTitle.value}`;
     bookAuthor.innerText = `Author: ${newBookAuthor.value}`;
     bookPages.innerText = `Pages: ${newBookPages.value}`;
@@ -68,15 +77,24 @@ function addBookToLibrary() {
     card.append(changeHasRead);
     changeHasRead.append(changeHasReadTitle, changeHasReadButtons);
     changeHasReadButtons.append(changeToHasRead, changeToHasNotRead);
+    card.append(deleteBook);
+    deleteBook.append(deleteBookButton);
 
     changeToHasRead.addEventListener('click', () => {
-        let hasReadText = document.querySelector('h5');
-        hasReadText.innerText = 'Read: Yes';
+        myLibrary[0].hasRead = 'Yes';
+        bookHasRead.innerText = `Read: ${myLibrary[0].hasRead}`;
     });
 
     changeToHasNotRead.addEventListener('click', () => {
-        let hasReadText = document.querySelector('h5');
-        hasReadText.innerText = 'Read: No';
+        myLibrary[0].hasRead = 'No';
+        bookHasRead.innerText = `Read: ${myLibrary[0].hasRead}`;
+    });
+
+    deleteBookButton.addEventListener('click', () => {
+        myLibrary.splice(0, 1);
+        card.style.display = 'none';
+        // ${scopeArrayObject}, 1
+        console.log(myLibrary);
     });
 
     bookSection.append(card);

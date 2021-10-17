@@ -33,6 +33,15 @@ section {
     transition: background-position 275ms ease;
 }
 
+.deleteBookContainer {
+    display: grid;
+    padding-top: 35px;
+}
+
+.deleteBookButton {
+    background-color: black;
+}
+
 h2 {
     margin-top: 0;
     text-align: center;
