@@ -93,19 +93,45 @@ function addBookToLibrary() {
     deleteBookButton.addEventListener('click', () => {
         myLibrary.splice(0, 1);
         card.style.display = 'none';
-        // ${scopeArrayObject}, 1
-        console.log(myLibrary);
     });
 
     bookSection.append(card);
 }
 
 newBookButton.addEventListener('click', () => {
-    addBookToLibrary();
-
     creator = document.querySelector('#creator');
     creator.style.display = 'none';
 
-    const library = document.querySelector('section');
+    let library = document.querySelector('section');
     library.style.display = 'grid';
+
+    let titleError = document.createElement('p');
+    titleError.classList.add('titleError');
+    titleError.innerText = 'Please fill the fields';
+    titleError.style.display = 'block';
+
+    let errorMessage = document.querySelector('.titleError');
+
+    if (
+        newBookTitle.value === '' ||
+        newBookAuthor.value === '' ||
+        newBookPages.value === ''
+    ) {
+        const creatorFields = document.querySelector('#creatorFields');
+        const titleLabel = document.querySelector('#titleLabel');
+        creator.style.display = 'grid';
+
+        if (errorMessage == undefined) {
+            creatorFields.insertBefore(titleError, titleLabel);
+        } else {
+            errorMessage.style.display = 'block';
+        }
+    } else {
+        if (errorMessage == undefined) {
+            addBookToLibrary();
+        } else {
+            addBookToLibrary();
+            errorMessage.style.display = 'none';
+        }
+    }
 });
