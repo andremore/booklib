@@ -64,7 +64,7 @@ function addBookToLibrary() {
     deleteBookButton.classList.add('deleteBookButton');
     deleteBookButton.innerText = 'Delete Book';
 
-    bookTitle.innerText = `${newBookTitle.value}`;
+    bookTitle.innerText = `${newBookTitle.value.toUpperCase()}`;
     bookAuthor.innerText = `Author: ${newBookAuthor.value}`;
     bookPages.innerText = `Pages: ${newBookPages.value}`;
     bookHasRead.innerText = `Read: ${
@@ -133,5 +133,19 @@ newBookButton.addEventListener('click', () => {
             addBookToLibrary();
             errorMessage.style.display = 'none';
         }
+    }
+});
+
+let darkMode = document.querySelector('#darkMode');
+
+darkMode.addEventListener('click', () => {
+    const bodySelector = document.querySelector('body');
+
+    if (bodySelector.style.filter == 'grayscale(100%)') {
+        bodySelector.style.filter = '';
+        bodySelector.style.backgroundColor = '#a8b0bf';
+    } else {
+        bodySelector.style.filter = 'grayscale(100%)';
+        bodySelector.style.backgroundColor = '#AFAFAF';
     }
 });
