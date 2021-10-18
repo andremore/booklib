@@ -1,5 +1,29 @@
 import * as menu from './menu.js';
 
+//////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+// TODO: /////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+////// * = Completed  ////////////////////////////////////////////////////////////////////
+////// ? = Currently working  ////////////////////////////////////////////////////////////
+////// ! = Bugs  /////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+//  1. Make first timer add book button show up if his library is empty            ///////
+//////////////////////////////////////////////////////////////////////////////////////////
+//  2. Input with capitalizing function                                            ///////
+//////////////////////////////////////////////////////////////////////////////////////////
+//  3. Capitalize Book Author                                                      ///////
+//////////////////////////////////////////////////////////////////////////////////////////
+//  4. Complete Refactor to classes || objects to gain access through localStorage ///////
+/// / 4.1. Split code into modules                                                 ///////
+/// / 4.2. Refactor to classes || objects                                          ///////
+/// / 4.3. localStorage Integration                                                ///////
+//////////////////////////////////////////////////////////////////////////////////////////
+//  5. Documentation                                                               ///////
+//////////////////////////////////////////////////////////////////////////////////////////
+//  Version 1.00 /////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+
 const newBookButton = document.querySelector('#addBook');
 const newBookTitle = document.querySelector('#bookName');
 const newBookAuthor = document.querySelector('#bookAuthor');
@@ -31,7 +55,7 @@ function addBookToLibrary() {
 
     myLibrary.push(book);
 
-    let card = document.createElement('div');
+    let bookCard = document.createElement('div');
     let bookTitle = document.createElement('h2');
     let line = document.createElement('hr');
     let bookAuthor = document.createElement('h3');
@@ -71,13 +95,13 @@ function addBookToLibrary() {
         hasReadSelector.options[hasReadSelector.selectedIndex].value
     }`;
 
-    card.classList.add('card');
-    card.append(bookTitle, line, bookAuthor, bookPages, bookHasRead);
+    bookCard.classList.add('book');
+    bookCard.append(bookTitle, line, bookAuthor, bookPages, bookHasRead);
 
-    card.append(changeHasRead);
+    bookCard.append(changeHasRead);
     changeHasRead.append(changeHasReadTitle, changeHasReadButtons);
     changeHasReadButtons.append(changeToHasRead, changeToHasNotRead);
-    card.append(deleteBook);
+    bookCard.append(deleteBook);
     deleteBook.append(deleteBookButton);
 
     changeToHasRead.addEventListener('click', () => {
@@ -92,10 +116,10 @@ function addBookToLibrary() {
 
     deleteBookButton.addEventListener('click', () => {
         myLibrary.splice(0, 1);
-        card.style.display = 'none';
+        bookCard.style.display = 'none';
     });
 
-    bookSection.append(card);
+    bookSection.append(bookCard);
 }
 
 newBookButton.addEventListener('click', () => {
@@ -133,19 +157,5 @@ newBookButton.addEventListener('click', () => {
             addBookToLibrary();
             errorMessage.style.display = 'none';
         }
-    }
-});
-
-let darkMode = document.querySelector('#darkMode');
-
-darkMode.addEventListener('click', () => {
-    const bodySelector = document.querySelector('body');
-
-    if (bodySelector.style.filter == 'grayscale(100%)') {
-        bodySelector.style.filter = '';
-        bodySelector.style.backgroundColor = '#a8b0bf';
-    } else {
-        bodySelector.style.filter = 'grayscale(100%)';
-        bodySelector.style.backgroundColor = '#AFAFAF';
     }
 });

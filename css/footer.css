@@ -1,0 +1,49 @@
+@import 'global.css';
+
+/* * These are the CSS styles for the <footer> only */
+/* Some classes from 'main.css' were used in these HTML <elements> */
+
+/* Container */
+footer {
+    display: grid;
+    justify-content: center;
+    color: #0b0b0d;
+    align-items: center;
+    padding-top: 1.4em;
+    padding-bottom: 1.4em;
+}
+
+/* * Text */
+footer > span {
+    font-size: small;
+    font-weight: 500;
+}
+
+/* * Button */
+footer > a {
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    color: #0b0b0d;
+    background-color: #f2c166;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0.25em;
+    max-width: 100%;
+    width: 5em;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button - Hover */
+footer > a:hover {
+    background-color: #ffb52c;
+}
+
+/* Icon */
+box-icon[name='github'] {
+    margin-right: 0.25em;
+}
+
+/* * Responsiveness */

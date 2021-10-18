@@ -1,0 +1,203 @@
+@import 'footer.css';
+@import 'header.css';
+@import 'creator.css';
+@import 'library.css';
+
+/* * These CSS styles are used globally in the app */
+
+/*
+//////////////////////////////////////////////
+    TODO: ////////////////////////////////////
+//////////////////////////*  * = Completed  //
+//////////////////*  ? = Currently working  //
+///////////////////////////////*  ! = Bugs  //
+//////////////////////////////////////////////
+    * 1. Variables                      //////
+        * 1.1. Color                    //////
+        * 1.2. Background-color         //////
+        * 1.3. Fonts                    //////
+//////////////////////////////////////////////
+    ? 2. Classes                        //////
+        * 2.1. Color                    //////
+        * 2.2. Background-color         //////
+        * 2.3. Font-size                //////
+        ? 2.4. Apply to HTML/CSS        //////
+//////////////////////////////////////////////
+        3. Styles                       //////
+        3.1. Font-size                  //////
+        3.2. Buttons                    //////
+        3.3. Creator                    //////
+        3.4. Library                    //////
+//////////////////////////////////////////////
+    4. Has Read Refactor                //////
+        4.1. Add Icons - has read       //////
+//////////////////////////////////////////////
+    5. Responsiveness                   //////
+        5.1. Header                     //////
+        5.2. Footer                     //////
+        5.3. Library                    //////
+        5.4. Creator      ////////////////////
+//////////////////////////////////////////////
+    6. Documentation                    //////
+                          ////////////////////
+//////////////////////////////////////////////                
+////////////////////* ?  Version 1.00   //////
+//////////////////////////////////////////////
+*/
+
+/* * Global Variables */
+:root {
+    /* Colors */
+    --color-white: #dfe6f5;
+
+    --color-gray: #a8b0bf;
+
+    --color-black: #0b0b0d;
+
+    --color-yellow: #f2c166;
+    --color-dark-yellow: #ffb52c;
+
+    --color-blue: #583bbf;
+    --color-dark-blue: #38267a;
+
+    /* Font-size Property */
+    --text-xs: small;
+    --text-sm: 18px;
+    --text-md: 24px;
+    --text-lg: 36px;
+    --text-xl: 48px;
+    --text-2xl: 52px;
+    --text-4xl: 64px;
+}
+
+/* * Font-size */
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-md {
+    font-size: var(--text-md);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-2xl {
+    font-size: var(--text-2xl);
+}
+
+.text-4xl {
+    font-size: var(--text-4xl);
+}
+
+/* * Color */
+.color-white {
+    color: var(--color-white);
+}
+
+.color-gray {
+    color: var(--color-gray);
+}
+
+.color-black {
+    color: var(--color-black);
+}
+
+.color-yellow {
+    color: var(--color-yellow);
+}
+
+.color-dark-yellow {
+    color: var(--color-dark-yellow);
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+.color-dark-blue {
+    color: var(--color-dark-blue);
+}
+
+/* Background Color */
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-gray {
+    background-color: var(--color-gray);
+}
+
+.bg-black {
+    background-color: var(--color-black);
+}
+
+.bg-yellow {
+    background-color: var(--color-yellow);
+}
+
+.bg-dark-yellow {
+    background-color: var(--color-dark-yellow);
+}
+
+.bg-blue {
+    background-color: var(--color-blue);
+}
+
+.bg-dark-blue {
+    background-color: var(--color-dark-blue);
+}
+
+/* * Default global styling */
+/* Font Family */
+* {
+    font-family: sans-serif;
+}
+
+/* Body */
+body {
+    background-color: var(--color-gray);
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Icons */
+box-icon {
+    display: grid;
+    place-content: center;
+}
+
+/* Buttons */
+button:hover {
+    cursor: pointer;
+}
+
+/* Inputs */
+input:hover {
+    cursor: pointer;
+}
+
+/* Lines <hr> */
+hr {
+    border: 1px solid #474d59;
+    margin: 0;
+}
+
+/* * Global Classes */
+/* Padding */
+.p-0 {
+    padding: 0;
+}
+
+/* * Responsiveness */

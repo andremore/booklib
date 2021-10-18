@@ -1,0 +1,43 @@
+@import 'global.css';
+
+/* * These are the CSS styles for the <header> only */
+/* Some classes from 'main.css' were used in these HTML <elements> */
+
+/* Container */
+header {
+    display: flex;
+    padding: 1.4em;
+    background-color: #a8b0bf;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* * Title & Sub title - Container */
+header > a {
+    text-decoration: none;
+    color: #0b0b0d;
+}
+
+/* Title */
+header > a > h1 {
+    margin-bottom: 0;
+}
+
+/* Sub title */
+header > a > h6 {
+    margin-top: 0;
+}
+
+/* * Dark Mode & Add a Book - Container */
+header > div {
+    display: flex;
+}
+
+/* Buttons */
+header > div > button {
+    background: none;
+    border: 0;
+}
+
+/* * Responsiveness */

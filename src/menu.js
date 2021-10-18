@@ -39,6 +39,25 @@ closeButton.addEventListener('click', () => {
     library.style.display = 'grid';
 });
 
-// titleValidator.validity.valid;
+let darkMode = document.querySelector('#darkMode');
+
+darkMode.addEventListener('click', () => {
+    const bodySelector = document.querySelector('body');
+
+    let moon = document.querySelector("[name='moon']");
+
+    if (bodySelector.style.filter == 'grayscale(100%)') {
+        bodySelector.style.filter = '';
+        bodySelector.style.backgroundColor = '#a8b0bf';
+
+        moon.setAttribute('type', '');
+        moon.setAttribute('name', 'moon');
+    } else {
+        bodySelector.style.filter = 'grayscale(100%)';
+        bodySelector.style.backgroundColor = '#AFAFAF';
+
+        moon.setAttribute('type', 'solid');
+    }
+});
 
 export * from './menu.js';

@@ -1,0 +1,105 @@
+@import 'global.css';
+
+/* * These are the CSS styles for the Library <section> only */
+/* Some classes from 'main.css' were used in these HTML <elements> */
+
+/* Container */
+section {
+    background-color: #a8b0bf;
+    padding: 1.4em;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(1, 1fr);
+    grid-row-gap: 1.5em;
+}
+
+/* * Book Card */
+.book {
+    background: linear-gradient(to left, #f2c166 50%, #583bbf 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 5px 10px #0b0b0d35;
+    transition: background-position 275ms ease;
+}
+
+.book:hover {
+    background-position: left bottom;
+    transition: background-position 275ms ease;
+    cursor: pointer;
+}
+
+.book:hover * {
+    color: #dfe6f5;
+}
+
+/* Book - Title */
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.changeHasRead {
+    font-weight: 600;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: right;
+}
+
+.changeHasRead > div {
+    text-align: right;
+    margin-right: 20%;
+}
+
+.changeHasRead > div > button:nth-last-child(1) {
+    margin-left: 10%;
+}
+
+div[data-hasRead] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+div[data-hasRead] > label {
+    color: #0b0b0d;
+}
+
+div[data-hasRead-option] {
+    justify-self: end;
+}
+
+#hasRead {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #ecf0f8;
+    border: 1px solid #787d88d0;
+    border-radius: 5px;
+}
+
+#hasRead:hover {
+    outline: 2px solid #583bbf;
+}
+
+#hasRead:focus {
+    outline: 2px solid #583bbf;
+}
+
+/* Delete Book - Container */
+.deleteBookContainer {
+    display: grid;
+    padding-top: 35px;
+}
+
+.deleteBookButton {
+    background-color: black;
+}
+
+/* * Responsiveness */

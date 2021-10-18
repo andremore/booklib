@@ -1,41 +1,74 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Icon Links -->
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./css/style.css" />
+        <script
+            src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"
+            defer
+        ></script>
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="./css/global.css" />
+        <!-- Javascript Link -->
         <script src="./src/app.js" type="module"></script>
+
         <title>Book Library</title>
     </head>
     <body>
+        <!-- TODO: 
+            1. Overall Refactor
+            2. Apply new CSS Styles
+            3. iOS / Android <input><select> integration
+        -->
+        <!-- Header -->
         <header>
-            <div>
+            <!-- Header - Title & Subtitle -->
+            <a href="#">
                 <h1>My Book Library</h1>
                 <h6>Keep up with your books</h6>
-            </div>
+            </a>
+            <!-- Header - Menu -->
             <div>
-                <button id="darkMode" type="submit">Dark Mode</button>
-                <a href="#" class="material-icons" id="menuButton">
-                    library_books
-                    <span>Add Book</span>
-                </a>
+                <!-- Menu - Dark mode button -->
+                <button id="darkMode" type="submit" class="p-0">
+                    <box-icon name="moon" color="#0b0b0d" size="lg"></box-icon>
+                </button>
+                <!-- Menu - Open/close Creator (<div id="creator">) Button -->
+                <button type="submit" id="menuButton" class="p-0">
+                    <box-icon
+                        name="book-add"
+                        color="#0b0b0d"
+                        size="lg"
+                    ></box-icon>
+                </button>
             </div>
         </header>
-        <hr style="border: 1px solid #474d59" />
+        <!-- Line -->
+        <hr />
+        <!-- First timer Button -->
         <div>
-            <a href="#" class="material-icons" id="firstTimer">
-                library_books
+            <a href="#" id="firstTimer">
+                <box-icon
+                    name="book-add"
+                    color="#a8b0bf"
+                    size="2.5rem"
+                ></box-icon>
                 <span>Add Book</span>
             </a>
         </div>
+        <!-- Creator -->
         <div id="creator">
+            <!-- Creator - Close Creator Button -->
             <a href="#" class="material-icons" id="closeButton"> close </a>
+            <!-- Creator - Input & Label Container -->
             <div id="creatorFields">
+                <!-- Book - Title -->
                 <label for="bookName" id="titleLabel">Book name:</label>
                 <input
                     type="text"
@@ -43,6 +76,7 @@
                     placeholder="Book Name"
                     id="bookName"
                 />
+                <!-- Book - Author -->
                 <label for="bookAuthor">Book author:</label>
                 <input
                     type="text"
@@ -50,6 +84,7 @@
                     placeholder="Author"
                     id="bookAuthor"
                 />
+                <!-- Book - Has Read -->
                 <div data-hasRead>
                     <label>Have you read it?</label>
                     <div data-hasRead-option>
@@ -59,6 +94,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- Book - Number of pages -->
                 <label for="bookPages">Number of pages:</label>
                 <input
                     type="number"
@@ -66,23 +102,21 @@
                     placeholder="Number of pages"
                     id="bookPages"
                 />
+                <!-- Book - Submit/Add Book Button -->
                 <button type="submit" id="addBook">Add Book</button>
             </div>
         </div>
-        <section>
-            <!-- <div class="card">
-                <h2 id="title">Name of the book</h2>
-                <h3>Author</h3>
-                <h4>Pages:</h4>
-                <h5>Has read:</h5>
-            </div> -->
-        </section>
+        <!-- Library -->
+        <section></section>
+        <!-- Line -->
+        <hr />
         <!-- Footer -->
         <footer>
-            <span>Project made by André Morgado (andremore)</span>
-            <a href="https://github.com/andremore" target="_blank"
-                >Github Icon</a
-            >
+            <span> Project made by André Morgado (andremore)</span>
+            <a href="https://github.com/andremore" target="_blank">
+                <box-icon name="github" type="logo" color="#0b0b0d"></box-icon>
+                Github
+            </a>
         </footer>
     </body>
 </html>

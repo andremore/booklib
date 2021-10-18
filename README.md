@@ -2,12 +2,8 @@
 
 A simple book library made for "The Odin Project - Full Stack Javascript Course"
 
-Main functionality is working
+# Roadmap to version 1.0
 
-TODO:
+## Going through the code
 
--   localStorage Integration
--   Layout and Styles
--   Responsiveness
--   HTML/CSS/JS Refactor
--   Documentation
+For better readibility use the extension "Better Comments"
