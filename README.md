@@ -9,3 +9,4 @@ TODO:
 -   localStorage Integration
 -   Responsiveness
 -   HTML/CSS/JS Refactor
+-   Documentation
