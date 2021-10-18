@@ -7,5 +7,7 @@ Main functionality is working
 TODO:
 
 -   localStorage Integration
+-   Layout and Styles
 -   Responsiveness
 -   HTML/CSS/JS Refactor
+-   Documentation
